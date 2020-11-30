@@ -128,7 +128,7 @@ app.get('/:id', auth.verificaToken, (req, res) => {
            }
        })
        .catch(err => {
-           return re.status(500).json({
+           return res.status(500).json({
                ok: 'false',
                mensaje: 'Error al buscar el empresa',
                error: err            });
